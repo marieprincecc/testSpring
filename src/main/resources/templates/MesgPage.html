@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+</head>
+<body>
+    <h1>Message</h1>
+
+    <form action="#" th:action="@{/msg}" th:object="${newMessage}" method="POST">
+        <label for="author">Auteur</label>
+        <input type="text" name="author" th:field="*{author}">
+        <label for="message">Message</label>
+        <input type="text" name="message" th:field="*{message}">
+        <input type="submit" value="save">
+    </form>
+    <div th:each="msg:${msgList}">
+        <p th:text="${msg.author}"></p>
+        <p th:text="${msg.message}"></p>
+        <p th:text="${msg.timeStamp}"></p>
+    </div>
+</body>
+</html>
