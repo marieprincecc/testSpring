@@ -1,0 +1,20 @@
+
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+version="2.0">
+<persistence-unit name="connect">
+    <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+    <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/demo?serverVersion=5.7"/>
+    <property name="javax.persistence.jdbc.user" value="debian-sys-maint"/>
+    <property name="javax.persistence.jdbc.password" value="2DGqCxbbt4g2lGVp"/>
+
+    <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+    <property name="hibernate.show_sql" value="true"/>
+    <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- update met a jour sans suppresion, create met a jour et drop si besoin, validate n'utilise que ce qui existe en bdd-->
+
+    
+
+</persistence-unit>
+</persistence>
